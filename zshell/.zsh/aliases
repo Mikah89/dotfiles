@@ -1,0 +1,27 @@
+# Commands
+alias rsync='rsync --progress'
+alias mv='mv -v'
+alias rm='rm -Iv'
+alias cp='cp -rv'
+alias grep='grep --color=auto'
+
+# ls related
+alias ls='ls --color=auto -F --group-directories-first'
+alias ll='ls -lhaF'
+alias l='ls -lh'
+alias lnc='ls --color=never -lh'
+alias llnc='ls --color=never -lhaF'
+
+# Pacman/AUR related
+alias packer='packer-color'
+alias pacupd='pacman -Syu'
+alias aurupd='packer -Syyuu --auronly'
+alias pacadd='pacman -S'
+alias auradd='packer -S --auronly'
+alias pacsrch='pacman -Ss'
+alias aursrch='packer -Ss --auronly'
+alias pacorphans='pacman -Qdt'
+alias pacdel='pacman -Rscn'
+alias pacdelorphans='pacman -Rscn $(pacman -Qdtq)'
+alias pacinf='pacman -Qi'
+

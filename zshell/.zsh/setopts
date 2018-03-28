@@ -1,0 +1,98 @@
+# If a command is issued that can't be execued as a normal command, and the
+# command is the name of a directory, perform the cd command to that directory
+setopt AUTO_CD
+
+# Automatically list choices on an ambiguous completion.
+setopt AUTO_LIST
+
+# If set, parameter expansion, command substitution and arithmetic expansion
+# are performed in prompts. Substitutions within prompts do not affect the
+# command status.
+setopt PROMPT_SUBST
+
+# Automatically use menu completion after the second consecutive request for
+# completion, for example by pressing the tab key repeatedly. This options is
+# overridden by MENU_COMPLETE.
+setopt AUTO_MENU
+
+# If a parameter is completed whose content is the name of a directory, then
+# add a trailing slash instead of space.
+setopt AUTO_PARAM_SLASH
+
+# If a parameter is completed resulting for a completion is a slash and the 
+# next character typed is a world delimiter, a slash, or a character that ends 
+# a command (such as a semicolon or an ampersand), remove the slash.
+setopt AUTO_REMOVE_SLASH
+
+# When the current word has a glob pattern, do not insert all the words
+# resulting from the expansion but generate matches as for completion and cycle
+# through them like MENU_COMPLETE.
+setopt GLOB_COMPLETE
+
+# Whenever a command completion is attempted, make sure the entire command path
+# is hashed first. This makes the first completion slower.
+setopt HASH_LIST_ALL
+
+# This option works when AUTO_LIST or BASH_AUTO_LIST is also set. If there is
+# an unambiguous prefix to insert on the command line, that is done without
+# list being displayed; in other words, auto-listing behaviour only takes place
+# when nothing would be inserted.
+setopt LIST_AMBIGUOUS
+
+# Treat the '#', '~' and '^' characters as part of patterns for filename
+# generation, etc. (An initial unquoted '~' always produces named directory
+# expansion.)
+setopt EXTENDED_GLOB 
+
+# Perform filename generation (globbing).
+setopt GLOB
+
+# Append a trailing '/' to all directory names resulting from filename
+# generation (globbing).
+setopt MARK_DIRS
+
+# IF a pattern for filename generation has no matches, print an error, instead
+# of leaving it unchanged in the argument list. This also applies to file
+# expansion of an initial '~' or '='.
+setopt NOMATCH
+
+# If this is et, zsh sessions will append their history list to the history
+# file, rather than replace it. Thus, multiple parallel zsh sessions will all
+# have the new entries from their history lists added to the history file, in
+# the otrder that they exit.
+setopt APPEND_HISTORY
+
+# If a new command line being added to the history list duplicates an older
+# one, the older command is removed from the list (even if it is not the
+# previous event).
+setopt HIST_IGNORE_ALL_DUPS
+
+# Remove command lines from the history list when the first character one the
+# line is a space.
+setopt HIST_IGNORE_SPACE
+
+# Expand aliases.
+setopt ALIASES
+
+# Allows '>' redirection to truncate existing files, and '>>' to create files.
+# Otherwise '>!' or '>|' must be used to truncate a file, and '>>!' or '>>|'
+# to create a file.
+setopt CLOBBER
+
+# Try to correct the spelling of commands. Note that, when the HASH_LIST_ALL
+# option is not set or when some directories in the path are not readable, this
+# may falsely report spelling errors the first time some commands are used.
+setopt CORRECT
+
+# Note the location of each command the first time it is executed. Subsequent
+# invocations of the same command will use the saved location, avoiding a path
+# search.
+setopt HASH_CMDS
+
+# Whenever a command name is hashed, hash the directory containing it, as well
+# as all directories that occur earlier in the path. Has no effect ir neither
+# HASH_CMDS nor CORRECT is set.
+setopt HASH_DIRS
+
+# Beep on error in ZLE.
+setopt BEEP

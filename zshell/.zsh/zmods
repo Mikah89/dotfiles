@@ -1,0 +1,8 @@
+# Complete listing extensions.
+zmodload -i zsh/complist
+
+# Standard scientific functions for use in mathematical evaluations
+zmodload -i zsh/mathfunc
+
+# Interface to the terminfo database.
+zmodload -i zsh/terminfo

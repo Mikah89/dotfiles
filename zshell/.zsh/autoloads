@@ -1,0 +1,8 @@
+# Auto complete.
+autoload -Uz compinit && compinit
+
+# Color arrays.
+autoload -U colors && colors
+
+# VCS.
+autoload -Uz vcs_info

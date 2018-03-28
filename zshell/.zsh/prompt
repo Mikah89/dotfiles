@@ -1,0 +1,25 @@
+function precmd {
+	vcs_info 'prompt'
+	prompt_set_color
+	prompt_set
+}
+
+function prompt_set_color {
+	if [ `whoami` = root ]; then
+		PROMPT_COLOR="${red}"
+		PROMPT_CHAR="#"
+	else
+		PROMPT_COLOR="${blue}"
+		PROMPT_CHAR="%%"
+	fi      
+}
+
+function prompt_set {
+	SCM_BRANCH="$vcs_info_msg_0_"
+	PROMPT="%T"
+	if [ -n "$SSH_CONNECTION" ]; then
+		PROMPT="${PROMPT} ${BLACK}${HOST}"
+	fi
+	PROMPT="${PROMPT} ${PROMPT_COLOR}${PROMPT_CHAR}${NC} "
+	RPROMPT="${SCM_BRANCH} ${white}[${WHITE}%~${white}]${NC}"
+}

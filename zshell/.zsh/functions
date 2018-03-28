@@ -1,0 +1,31 @@
+expand-or-complete-with-dots() {
+	echo -n "..."
+	zle expand-or-complete
+	zle redisplay
+}
+
+encrypt-file-pgp() {
+	## $1 stands for the output filename
+	## $2 stands for the identifier of the encryption key (e.g. email addr)
+	## $3 stands for the filename we want to encrypt
+
+	if [ -z '$1' ] || [ -z '$2' ] || [ -z '$3' ] || [ $# -eq 0 ] ; then
+		echo 'The output filename, pgp key identifier and input filename must be provided, respectively'.
+		return
+	fi
+
+	gpg --output $1 --encrypt --recipient $2 $3
+}
+
+decrypt-file-pgp() {
+	## $1 stands for the output filename
+	## $2 stands for input filename
+	if [ -z '$1' ] || [ -z '$2' ] || [ $# -eq 0 ] ; then
+		echo 'The output filename and input filename must be provided, respectively'.
+		return
+	fi
+
+	gpg --output $1 --decrypt $2
+}
+
+zle -N expand-or-complete-with-dots

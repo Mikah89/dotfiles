@@ -1,0 +1,36 @@
+# In case GTK+ doesn't use XFT, force it.
+export GDK_USE_XFT=1
+
+# Same for QT.
+export QT_XFT=1
+
+# Colored output for less.
+export LESS_TERMCAP_mb=$'\e[1;31m'
+export LESS_TERMCAP_md=$'\e[1;31m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[1;34;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;32m'
+
+# Colors.
+export black=$'%{\e[0;30m%}'
+export BLACK=$'%{\e[1;30m%}'
+export red=$'%{\e[0;31m%}'
+export RED=$'%{\e[1;31m%}'
+export green=$'%{\e[0;32m%}'
+export GREEN=$'%{\e[1;32m%}'
+export yellow=$'%{\e[0;33m%}'
+export YELLOW=$'%{\e[1;33m%}'
+export blue=$'%{\e[0;34m%}'
+export BLUE=$'%{\e[1;34m%}'
+export purple=$'%{\e[0;35m%}'
+export PURPLE=$'%{\e[1;35m%}'
+export cyan=$'%{\e[0;36m%}'
+export CYAN=$'%{\e[1;36m%}'
+export white=$'%{\e[0;37m%}'
+export WHITE=$'%{\e[1;37m%}'
+export NC=$'%{\e[0m%}'
+
+# $EDITOR
+export EDITOR=emacs
