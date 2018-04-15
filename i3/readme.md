@@ -10,5 +10,10 @@ These will probably be needed to render unicode chars on the config file:
 
 ## Steps
 * Put i3.script.sh in `~/.bin` folder. For a different folder change the details in the i3 config file.
-* The remaining configuration file (both i3 and polybar) should go to their appropriate configuration folder. It my vary on your system.
+* The remaining configuration file (both i3 and polybar) should go to their appropriate configuration folder. It may vary on your system.
     * Polybar in my case is in my `~/.config/polybar/` folder
+
+## Screenshots
+
+![Rofi App launcher](https://i.imgur.com/qFmMiJf.png)
+![Tiled Screen View](https://i.imgur.com/yIYkG1M.png)
